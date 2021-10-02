@@ -1,11 +1,12 @@
 // import React from 'react';
 import React from 'react';
-import { useFieldType } from 'payload/components/forms';
+import { useFieldType, Label } from 'payload/components/forms';
 
-const colorPickerField = ({ path }) => {
+const colorPickerField = ({ path, label }) => {
   const { value = '', setValue } = useFieldType({ path });
   return (
     <div>
+      <Label label={label} />
       <ul>
         {['red', 'blue', 'green'].map((color) => {
           return (
