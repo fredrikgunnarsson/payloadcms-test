@@ -1,6 +1,7 @@
 import { buildConfig } from 'payload/config';
 import dotenv from 'dotenv';
 import colorPickerField from './payload/colorPickerField';
+import myBlock from './payload/blocks/myBlock';
 
 dotenv.config();
 
@@ -21,6 +22,11 @@ export default buildConfig({
               return `Antal tecken: ${value?.length}`;
             },
           },
+        },
+        {
+          name: 'layout',
+          type: 'blocks',
+          blocks: [myBlock],
         },
         {
           name: 'colorPicker',
