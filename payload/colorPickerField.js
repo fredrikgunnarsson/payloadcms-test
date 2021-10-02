@@ -16,6 +16,7 @@ const colorPickerField = ({ path }) => {
                 fontWeight: value == color ? 800 : 100,
               }}
               onClick={() => setValue(color)}
+              key={color}
             >
               {color}
             </span>

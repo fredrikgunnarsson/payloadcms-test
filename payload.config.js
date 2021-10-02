@@ -19,6 +19,7 @@ export default buildConfig({
         {
           name: 'color-picker',
           type: 'text',
+          localized: true,
           admin: {
             components: {
               Field: colorPickerField,
