@@ -7,7 +7,7 @@ const colorPickerField = ({ path, label }) => {
   return (
     <div>
       <Label label={label} />
-      <ul>
+      <ul style={{ paddingLeft: 0 }}>
         {['red', 'blue', 'green'].map((color) => {
           return (
             <span

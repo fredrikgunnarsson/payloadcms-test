@@ -36,6 +36,7 @@ export default buildConfig({
             components: {
               Field: colorPickerField,
             },
+            position: 'sidebar',
           },
         },
         {
@@ -45,6 +46,7 @@ export default buildConfig({
             condition: (data) => {
               return data.colorPicker === 'blue' ? true : false;
             },
+            width: '50%',
           },
         },
       ],
