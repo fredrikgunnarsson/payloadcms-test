@@ -15,9 +15,13 @@ export default buildConfig({
         {
           name: 'title',
           type: 'text',
+          admin: {
+            position: 'sidebar',
+            description: 'field description test',
+          },
         },
         {
-          name: 'color-picker',
+          name: 'colorPicker',
           type: 'text',
           localized: true,
           admin: {
@@ -26,10 +30,25 @@ export default buildConfig({
             },
           },
         },
+        {
+          name: 'testField',
+          type: 'text',
+          admin: {
+            condition: (data) => {
+              return data.colorPicker === 'blue' ? true : false;
+            },
+          },
+        },
       ],
+      admin: {
+        useAsTitle: 'title',
+        description: 'test desc',
+      },
     },
   ],
   localization: {
     locales: ['sv', 'en'],
+    defaultLocale: 'en',
+    fallback: true,
   },
 });
