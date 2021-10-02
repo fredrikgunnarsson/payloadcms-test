@@ -17,7 +17,9 @@ export default buildConfig({
           type: 'text',
           admin: {
             position: 'sidebar',
-            description: 'field description test',
+            description: ({ value }) => {
+              return `Antal tecken: ${value?.length}`;
+            },
           },
         },
         {
