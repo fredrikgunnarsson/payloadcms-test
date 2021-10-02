@@ -1,5 +1,6 @@
 import { buildConfig } from 'payload/config';
 import dotenv from 'dotenv';
+import colorPickerField from './payload/colorPickerField';
 
 dotenv.config();
 
@@ -18,6 +19,11 @@ export default buildConfig({
         {
           name: 'color-picker',
           type: 'text',
+          admin: {
+            components: {
+              Field: colorPickerField,
+            },
+          },
         },
       ],
     },
